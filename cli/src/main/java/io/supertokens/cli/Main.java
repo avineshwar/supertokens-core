@@ -20,6 +20,7 @@ import io.supertokens.cli.commandHandler.CommandHandler;
 import io.supertokens.cli.commandHandler.help.HelpHandler;
 import io.supertokens.cli.commandHandler.install.InstallHandler;
 import io.supertokens.cli.commandHandler.list.ListHandler;
+import io.supertokens.cli.commandHandler.migrate.MigrateHandler;
 import io.supertokens.cli.commandHandler.start.StartHandler;
 import io.supertokens.cli.commandHandler.stop.StopHandler;
 import io.supertokens.cli.commandHandler.uninstall.UninstallHandler;
@@ -114,6 +115,7 @@ public class Main {
         commandHandler.put("start", new StartHandler());
         commandHandler.put("stop", new StopHandler());
         commandHandler.put("list", new ListHandler());
+        commandHandler.put("migrate", new MigrateHandler());
     }
 
     public static void removeShutdownHook() {
